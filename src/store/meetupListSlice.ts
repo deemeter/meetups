@@ -177,6 +177,7 @@ export const meetupListSlice = createSlice({
       .addCase(fetchMeetupList.fulfilled, (state, action) => {
         let newMeetups: Array<Meetup> = [];
         action.payload.map((item: any) => {
+          console.log("meetups fetched");
           let curr: Meetup = {
             id: item.id,
             name: item.name,

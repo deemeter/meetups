@@ -10,15 +10,25 @@ import UsersListPage from "./pages/UsersListPage/UsersListPage";
 import CreateMeetup from "./components/CreateMeetup/CreateMeetup";
 import EditMeetup from "./components/EditMeetup/EditMeetup";
 import { useAppSelector } from "./store/storeHooks";
-
+import { useEffect } from "react";
+import { useAppDispatch } from "./store/storeHooks";
 import MeetupList from "./components/MeetupList/MeetupList";
-
+import { fetchMeetupList } from "./store/meetupListSlice";
 function App() {
   const meetups = useAppSelector((state) => state.meetupList.meetups);
   const userId = useAppSelector((state) => state.user.id);
+  const token = useAppSelector((state) => state.user.token) || "";
   const onlyMyMeetups = meetups.filter((meetup) =>
     meetup.users.includes(Number(userId))
   );
+
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    (async () => {
+      await dispatch(fetchMeetupList(token));
+    })();
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
