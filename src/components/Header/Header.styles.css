@@ -1,0 +1,48 @@
+.header {
+  background: var(--DefaultColor);
+}
+
+.header__content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 22px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav ul {
+  display: flex;
+  column-gap: 35px;
+}
+
+.header__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--BoldColor);
+  font-size: 24px;
+}
+
+.header__link.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--AccentColor);
+  border-radius: 4px;
+  bottom: -5px;
+  left: 0;
+}
+
+.header__buttons button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__icon {
+  color: var(--AccentColor);
+}

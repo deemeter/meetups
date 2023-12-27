@@ -1,0 +1,40 @@
+@import url("./reset.css");
+:root {
+  /* vars */
+  --DefaultColor: #2c2c2c;
+  --SecondaryColor: #4c3f78;
+  --InfoColor: #008697;
+  --PrimaryColor: #b4b4c0;
+  --AccentColor: #b85526;
+  --BackgroundColor: #1e1e1e;
+  --BoldColor: #e9e9e9;
+  --MainFont: "Open sans";
+  --HeadingFont: "Open sans";
+
+  background: var(--BackgroundColor);
+  font-family: var(--MainFont);
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}

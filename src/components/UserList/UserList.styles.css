@@ -1,0 +1,29 @@
+.userlist_nav_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.userlist_nav_buttons > p {
+  font-size: 20px;
+  font-family: "Open sans";
+  font-weight: bold;
+  color: var(--AccentColor);
+}
+
+.userlist_icon {
+  color: inherit;
+}
+.userlist_btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--AccentColor);
+  &:disabled {
+    color: var(--DefaultColor);
+  }
+}

@@ -1,0 +1,79 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.userList__add {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  color: var(--BoldColor);
+  background: var(--InfoColor);
+  font-family: "Open sans";
+  font-size: 18px;
+  width: 160px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.create__user {
+  background: var(--BackgroundColor);
+}
+
+.create__fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.createUser__input {
+  color: var(--PrimaryColor);
+  background: var(--DefaultColor);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  height: 50px;
+  width: 200px;
+  &::placeholder {
+    color: var(--BoldColor);
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &:user-invalid {
+    background: rgba(0, 134, 151, 0.1);
+  }
+}
+
+.createUser__submit {
+  color: var(--BoldColor);
+  background: var(--SecondaryColor);
+  font-family: "Open sans";
+  font-size: 18px;
+  padding: 12px 37px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.create__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
